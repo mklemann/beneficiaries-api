@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "watch",
-    "start": "kill -9 $(lsof -t -i:3000) | node src/index.js",
+    "start": "nodemon src/index.js",
     "dev": "kill -9 $(lsof -t -i:3000) | nodemon src/index.js"
   },
   "author": "mklemann",
