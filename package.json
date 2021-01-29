@@ -1,0 +1,28 @@
+{
+  "name": "beneficiary-api",
+  "version": "1.0.0",
+  "description": "api to create, update, delete and list beneficiarys",
+  "main": "index.js",
+  "scripts": {
+    "test": "watch",
+    "start": "kill -9 $(lsof -t -i:3000) | node src/index.js",
+    "dev": "kill -9 $(lsof -t -i:3000) | nodemon src/index.js"
+  },
+  "author": "mklemann",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.13",
+    "restify": "^8.5.1",
+    "restify-router": "^0.6.2"
+  }
+}
