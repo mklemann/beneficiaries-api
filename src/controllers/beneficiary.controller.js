@@ -18,9 +18,9 @@ class BeneficiaryController {
         throw new Error(`O valor de limit deve ser no máximo 100`);
       }
 
-      const result = await beneficiaryService.get(Number(skip), Number(limit));
+      const result = await beneficiaryService.get(skip, limit);
 
-      if (!result) return responseHandler.noContent(res);
+      if (!result.length) return responseHandler.noContent(res);
 
       return responseHandler.success(res, result);
     } catch (err) {
