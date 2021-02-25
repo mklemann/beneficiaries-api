@@ -34,6 +34,10 @@ class BeneficiaryRepository {
   async delete(id) {
     return BeneficiaryModel.findOneAndDelete({ _id: id });
   }
+
+  async emptyCollection() {
+    return BeneficiaryModel.deleteMany();
+  }
 }
 
 module.exports = new BeneficiaryRepository();

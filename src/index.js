@@ -1,5 +1,3 @@
-// TODO mudar nome do cluster
-
 const server = require('./server');
 const config = require('./configs/env.config');
 

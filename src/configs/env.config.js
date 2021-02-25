@@ -1,4 +1,9 @@
-require('dotenv').config({ path: `${__dirname}/../environments/.dev.env` });
+require('dotenv').config({
+  path:
+    process.env.NODE_ENV === 'test'
+      ? `${__dirname}/../environments/.dev.env`
+      : `${__dirname}/../environments/.staging.env`,
+});
 
 module.exports = {
   mongodb: {
