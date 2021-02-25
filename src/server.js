@@ -15,6 +15,7 @@ class ServerApi {
   }
 
   routes() {
+    routes.applyRoutes(this.server, '/v1');
     routes.applyRoutes(this.server);
   }
 }

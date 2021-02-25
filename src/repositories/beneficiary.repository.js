@@ -6,7 +6,7 @@ class BeneficiaryRepository {
   }
 
   async get(skip, limit) {
-    return BeneficiaryModel.find().skip(skip).limit(limit);
+    return BeneficiaryModel.find().limit(Number(limit)).skip(Number(skip));
   }
 
   async getById(id) {
